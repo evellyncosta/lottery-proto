@@ -62,9 +62,9 @@
 
     <distributionManagement>
         <repository>
-            <id>evellyncosta</id>
+            <id>github</id>
             <name>Evellyn</name>
-            <url>https://maven.pkg.github.com/Owner/lottery-proto</url>
+            <url>https://maven.pkg.github.com/evellyncosta/lottery-proto</url>
         </repository>
     </distributionManagement>
 
