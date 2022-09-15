@@ -1,0 +1,21 @@
+syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+
+package com.lottery.stubs.player;
+
+option java_package = "com.lottery.stubs.player";
+option java_multiple_files = true;
+
+service PlayerService{
+  rpc getPlayerDetails(PlayerRequest) returns (PlayerResponse);
+}
+
+message PlayerRequest{
+  string id = 1;
+}
+
+message PlayerResponse{
+  string id = 1;
+  string name = 2;
+  google.protobuf.Timestamp birth_date = 3;
+}
