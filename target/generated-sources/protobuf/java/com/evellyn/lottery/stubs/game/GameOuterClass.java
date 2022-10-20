@@ -29,6 +29,11 @@ public final class GameOuterClass {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_evellyn_lottery_stubs_game_Game_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_evellyn_lottery_stubs_game_DrawNumbersResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_evellyn_lottery_stubs_game_DrawNumbersResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -40,21 +45,26 @@ public final class GameOuterClass {
     java.lang.String[] descriptorData = {
       "\n\"game-management-service/game.proto\022\036co" +
       "m.evellyn.lottery.stubs.game\032\037google/pro" +
-      "tobuf/timestamp.proto\"\037\n\013GameRequest\022\020\n\010" +
-      "playerId\030\001 \001(\t\"B\n\014GameResponse\0222\n\004game\030\001" +
-      " \003(\0132$.com.evellyn.lottery.stubs.game.Ga" +
-      "me\"_\n\004Game\022\n\n\002id\030\001 \001(\t\022\020\n\010playerId\030\002 \001(\t" +
-      "\022\017\n\007numbers\030\003 \001(\t\022(\n\004data\030\004 \001(\0132\032.google" +
-      ".protobuf.Timestamp2|\n\013GameService\022m\n\020ge" +
-      "tGamesByPlayer\022+.com.evellyn.lottery.stu" +
-      "bs.game.GameRequest\032,.com.evellyn.lotter" +
-      "y.stubs.game.GameResponseB\"\n\036com.evellyn" +
-      ".lottery.stubs.gameP\001b\006proto3"
+      "tobuf/timestamp.proto\032\033google/protobuf/e" +
+      "mpty.proto\"\037\n\013GameRequest\022\020\n\010playerId\030\001 " +
+      "\001(\t\"B\n\014GameResponse\0222\n\004game\030\001 \003(\0132$.com." +
+      "evellyn.lottery.stubs.game.Game\"_\n\004Game\022" +
+      "\n\n\002id\030\001 \001(\t\022\020\n\010playerId\030\002 \001(\t\022\017\n\007numbers" +
+      "\030\003 \001(\t\022(\n\004data\030\004 \001(\0132\032.google.protobuf.T" +
+      "imestamp\"%\n\023DrawNumbersResponse\022\016\n\006numbe" +
+      "r\030\001 \001(\t2\332\001\n\013GameService\022m\n\020getGamesByPla" +
+      "yer\022+.com.evellyn.lottery.stubs.game.Gam" +
+      "eRequest\032,.com.evellyn.lottery.stubs.gam" +
+      "e.GameResponse\022\\\n\013drawNumbers\022\026.google.p" +
+      "rotobuf.Empty\0323.com.evellyn.lottery.stub" +
+      "s.game.DrawNumbersResponse0\001B\"\n\036com.evel" +
+      "lyn.lottery.stubs.gameP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.EmptyProto.getDescriptor(),
         });
     internal_static_com_evellyn_lottery_stubs_game_GameRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -74,7 +84,14 @@ public final class GameOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_evellyn_lottery_stubs_game_Game_descriptor,
         new java.lang.String[] { "Id", "PlayerId", "Numbers", "Data", });
+    internal_static_com_evellyn_lottery_stubs_game_DrawNumbersResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_evellyn_lottery_stubs_game_DrawNumbersResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_evellyn_lottery_stubs_game_DrawNumbersResponse_descriptor,
+        new java.lang.String[] { "Number", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.EmptyProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -1,5 +1,7 @@
 syntax = "proto3";
+
 import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
 
 package com.evellyn.lottery.stubs.game;
 
@@ -8,6 +10,7 @@ option java_multiple_files = true;
 
 service GameService{
   rpc getGamesByPlayer(GameRequest) returns (GameResponse);
+  rpc drawNumbers(google.protobuf.Empty) returns (stream DrawNumbersResponse);
 }
 
 message GameRequest{
@@ -24,3 +27,8 @@ message Game{
   string numbers = 3;
   google.protobuf.Timestamp data = 4;
 }
+
+message DrawNumbersResponse{
+  string number = 1;
+}
+

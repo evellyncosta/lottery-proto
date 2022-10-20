@@ -46,6 +46,37 @@ public final class GameServiceGrpc {
     return getGetGamesByPlayerMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.evellyn.lottery.stubs.game.DrawNumbersResponse> getDrawNumbersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "drawNumbers",
+      requestType = com.google.protobuf.Empty.class,
+      responseType = com.evellyn.lottery.stubs.game.DrawNumbersResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.evellyn.lottery.stubs.game.DrawNumbersResponse> getDrawNumbersMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.evellyn.lottery.stubs.game.DrawNumbersResponse> getDrawNumbersMethod;
+    if ((getDrawNumbersMethod = GameServiceGrpc.getDrawNumbersMethod) == null) {
+      synchronized (GameServiceGrpc.class) {
+        if ((getDrawNumbersMethod = GameServiceGrpc.getDrawNumbersMethod) == null) {
+          GameServiceGrpc.getDrawNumbersMethod = getDrawNumbersMethod =
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.evellyn.lottery.stubs.game.DrawNumbersResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "drawNumbers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.evellyn.lottery.stubs.game.DrawNumbersResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new GameServiceMethodDescriptorSupplier("drawNumbers"))
+              .build();
+        }
+      }
+    }
+    return getDrawNumbersMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -101,6 +132,13 @@ public final class GameServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGamesByPlayerMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void drawNumbers(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.game.DrawNumbersResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDrawNumbersMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -110,6 +148,13 @@ public final class GameServiceGrpc {
                 com.evellyn.lottery.stubs.game.GameRequest,
                 com.evellyn.lottery.stubs.game.GameResponse>(
                   this, METHODID_GET_GAMES_BY_PLAYER)))
+          .addMethod(
+            getDrawNumbersMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.google.protobuf.Empty,
+                com.evellyn.lottery.stubs.game.DrawNumbersResponse>(
+                  this, METHODID_DRAW_NUMBERS)))
           .build();
     }
   }
@@ -135,6 +180,14 @@ public final class GameServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetGamesByPlayerMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void drawNumbers(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.game.DrawNumbersResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getDrawNumbersMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -156,6 +209,14 @@ public final class GameServiceGrpc {
     public com.evellyn.lottery.stubs.game.GameResponse getGamesByPlayer(com.evellyn.lottery.stubs.game.GameRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetGamesByPlayerMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<com.evellyn.lottery.stubs.game.DrawNumbersResponse> drawNumbers(
+        com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getDrawNumbersMethod(), getCallOptions(), request);
     }
   }
 
@@ -183,6 +244,7 @@ public final class GameServiceGrpc {
   }
 
   private static final int METHODID_GET_GAMES_BY_PLAYER = 0;
+  private static final int METHODID_DRAW_NUMBERS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -204,6 +266,10 @@ public final class GameServiceGrpc {
         case METHODID_GET_GAMES_BY_PLAYER:
           serviceImpl.getGamesByPlayer((com.evellyn.lottery.stubs.game.GameRequest) request,
               (io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.game.GameResponse>) responseObserver);
+          break;
+        case METHODID_DRAW_NUMBERS:
+          serviceImpl.drawNumbers((com.google.protobuf.Empty) request,
+              (io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.game.DrawNumbersResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -267,6 +333,7 @@ public final class GameServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GameServiceFileDescriptorSupplier())
               .addMethod(getGetGamesByPlayerMethod())
+              .addMethod(getDrawNumbersMethod())
               .build();
         }
       }
