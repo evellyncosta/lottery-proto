@@ -47,34 +47,34 @@ public final class PlayerServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.evellyn.lottery.stubs.file.FileUploadRequest,
-      com.evellyn.lottery.stubs.file.FileUploadResponse> getUploadMethod;
+      com.evellyn.lottery.stubs.file.FileUploadResponse> getUploadPhotoMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "upload",
+      fullMethodName = SERVICE_NAME + '/' + "uploadPhoto",
       requestType = com.evellyn.lottery.stubs.file.FileUploadRequest.class,
       responseType = com.evellyn.lottery.stubs.file.FileUploadResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
   public static io.grpc.MethodDescriptor<com.evellyn.lottery.stubs.file.FileUploadRequest,
-      com.evellyn.lottery.stubs.file.FileUploadResponse> getUploadMethod() {
-    io.grpc.MethodDescriptor<com.evellyn.lottery.stubs.file.FileUploadRequest, com.evellyn.lottery.stubs.file.FileUploadResponse> getUploadMethod;
-    if ((getUploadMethod = PlayerServiceGrpc.getUploadMethod) == null) {
+      com.evellyn.lottery.stubs.file.FileUploadResponse> getUploadPhotoMethod() {
+    io.grpc.MethodDescriptor<com.evellyn.lottery.stubs.file.FileUploadRequest, com.evellyn.lottery.stubs.file.FileUploadResponse> getUploadPhotoMethod;
+    if ((getUploadPhotoMethod = PlayerServiceGrpc.getUploadPhotoMethod) == null) {
       synchronized (PlayerServiceGrpc.class) {
-        if ((getUploadMethod = PlayerServiceGrpc.getUploadMethod) == null) {
-          PlayerServiceGrpc.getUploadMethod = getUploadMethod =
+        if ((getUploadPhotoMethod = PlayerServiceGrpc.getUploadPhotoMethod) == null) {
+          PlayerServiceGrpc.getUploadPhotoMethod = getUploadPhotoMethod =
               io.grpc.MethodDescriptor.<com.evellyn.lottery.stubs.file.FileUploadRequest, com.evellyn.lottery.stubs.file.FileUploadResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "upload"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "uploadPhoto"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.evellyn.lottery.stubs.file.FileUploadRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.evellyn.lottery.stubs.file.FileUploadResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new PlayerServiceMethodDescriptorSupplier("upload"))
+              .setSchemaDescriptor(new PlayerServiceMethodDescriptorSupplier("uploadPhoto"))
               .build();
         }
       }
     }
-    return getUploadMethod;
+    return getUploadPhotoMethod;
   }
 
   /**
@@ -134,9 +134,9 @@ public final class PlayerServiceGrpc {
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.file.FileUploadRequest> upload(
+    public io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.file.FileUploadRequest> uploadPhoto(
         io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.file.FileUploadResponse> responseObserver) {
-      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getUploadMethod(), responseObserver);
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getUploadPhotoMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -149,12 +149,12 @@ public final class PlayerServiceGrpc {
                 com.evellyn.lottery.stubs.player.PlayerResponse>(
                   this, METHODID_GET_PLAYER_DETAILS)))
           .addMethod(
-            getUploadMethod(),
+            getUploadPhotoMethod(),
             io.grpc.stub.ServerCalls.asyncClientStreamingCall(
               new MethodHandlers<
                 com.evellyn.lottery.stubs.file.FileUploadRequest,
                 com.evellyn.lottery.stubs.file.FileUploadResponse>(
-                  this, METHODID_UPLOAD)))
+                  this, METHODID_UPLOAD_PHOTO)))
           .build();
     }
   }
@@ -183,10 +183,10 @@ public final class PlayerServiceGrpc {
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.file.FileUploadRequest> upload(
+    public io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.file.FileUploadRequest> uploadPhoto(
         io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.file.FileUploadResponse> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
-          getChannel().newCall(getUploadMethod(), getCallOptions()), responseObserver);
+          getChannel().newCall(getUploadPhotoMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -236,7 +236,7 @@ public final class PlayerServiceGrpc {
   }
 
   private static final int METHODID_GET_PLAYER_DETAILS = 0;
-  private static final int METHODID_UPLOAD = 1;
+  private static final int METHODID_UPLOAD_PHOTO = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -269,8 +269,8 @@ public final class PlayerServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_UPLOAD:
-          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.upload(
+        case METHODID_UPLOAD_PHOTO:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.uploadPhoto(
               (io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.file.FileUploadResponse>) responseObserver);
         default:
           throw new AssertionError();
@@ -324,7 +324,7 @@ public final class PlayerServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new PlayerServiceFileDescriptorSupplier())
               .addMethod(getGetPlayerDetailsMethod())
-              .addMethod(getUploadMethod())
+              .addMethod(getUploadPhotoMethod())
               .build();
         }
       }

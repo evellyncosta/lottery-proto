@@ -41,14 +41,14 @@ public final class Player {
       "\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022.\n\nbirth_date\030\003 " +
       "\001(\0132\032.google.protobuf.Timestamp\022:\n\014games" +
       "ForUser\030\004 \003(\0132$.com.evellyn.lottery.stub" +
-      "s.game.Game2\371\001\n\rPlayerService\022u\n\020getPlay" +
+      "s.game.Game2\376\001\n\rPlayerService\022u\n\020getPlay" +
       "erDetails\022/.com.evellyn.lottery.stubs.pl" +
       "ayer.PlayerRequest\0320.com.evellyn.lottery" +
-      ".stubs.player.PlayerResponse\022q\n\006upload\0221" +
-      ".com.evellyn.lottery.stubs.file.FileUplo" +
-      "adRequest\0322.com.evellyn.lottery.stubs.fi" +
-      "le.FileUploadResponse(\001B$\n com.evellyn.l" +
-      "ottery.stubs.playerP\001b\006proto3"
+      ".stubs.player.PlayerResponse\022v\n\013uploadPh" +
+      "oto\0221.com.evellyn.lottery.stubs.file.Fil" +
+      "eUploadRequest\0322.com.evellyn.lottery.stu" +
+      "bs.file.FileUploadResponse(\001B$\n com.evel" +
+      "lyn.lottery.stubs.playerP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

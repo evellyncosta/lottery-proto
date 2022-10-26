@@ -11,7 +11,7 @@ option java_multiple_files = true;
 
 service PlayerService{
   rpc getPlayerDetails(PlayerRequest) returns (PlayerResponse);
-  rpc upload(stream file.FileUploadRequest) returns(file.FileUploadResponse);
+  rpc uploadPhoto(stream file.FileUploadRequest) returns(file.FileUploadResponse);
 }
 
 message PlayerRequest{
