@@ -77,6 +77,37 @@ public final class GameServiceGrpc {
     return getDrawNumbersMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.evellyn.lottery.stubs.game.Bet,
+      com.evellyn.lottery.stubs.game.Cupom> getDoBetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "doBet",
+      requestType = com.evellyn.lottery.stubs.game.Bet.class,
+      responseType = com.evellyn.lottery.stubs.game.Cupom.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<com.evellyn.lottery.stubs.game.Bet,
+      com.evellyn.lottery.stubs.game.Cupom> getDoBetMethod() {
+    io.grpc.MethodDescriptor<com.evellyn.lottery.stubs.game.Bet, com.evellyn.lottery.stubs.game.Cupom> getDoBetMethod;
+    if ((getDoBetMethod = GameServiceGrpc.getDoBetMethod) == null) {
+      synchronized (GameServiceGrpc.class) {
+        if ((getDoBetMethod = GameServiceGrpc.getDoBetMethod) == null) {
+          GameServiceGrpc.getDoBetMethod = getDoBetMethod =
+              io.grpc.MethodDescriptor.<com.evellyn.lottery.stubs.game.Bet, com.evellyn.lottery.stubs.game.Cupom>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "doBet"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.evellyn.lottery.stubs.game.Bet.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.evellyn.lottery.stubs.game.Cupom.getDefaultInstance()))
+              .setSchemaDescriptor(new GameServiceMethodDescriptorSupplier("doBet"))
+              .build();
+        }
+      }
+    }
+    return getDoBetMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -139,6 +170,13 @@ public final class GameServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDrawNumbersMethod(), responseObserver);
     }
 
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.game.Bet> doBet(
+        io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.game.Cupom> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getDoBetMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -155,6 +193,13 @@ public final class GameServiceGrpc {
                 com.google.protobuf.Empty,
                 com.evellyn.lottery.stubs.game.DrawNumbersResponse>(
                   this, METHODID_DRAW_NUMBERS)))
+          .addMethod(
+            getDoBetMethod(),
+            io.grpc.stub.ServerCalls.asyncClientStreamingCall(
+              new MethodHandlers<
+                com.evellyn.lottery.stubs.game.Bet,
+                com.evellyn.lottery.stubs.game.Cupom>(
+                  this, METHODID_DO_BET)))
           .build();
     }
   }
@@ -187,6 +232,14 @@ public final class GameServiceGrpc {
         io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.game.DrawNumbersResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getDrawNumbersMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.game.Bet> doBet(
+        io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.game.Cupom> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
+          getChannel().newCall(getDoBetMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -245,6 +298,7 @@ public final class GameServiceGrpc {
 
   private static final int METHODID_GET_GAMES_BY_PLAYER = 0;
   private static final int METHODID_DRAW_NUMBERS = 1;
+  private static final int METHODID_DO_BET = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -281,6 +335,9 @@ public final class GameServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_DO_BET:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.doBet(
+              (io.grpc.stub.StreamObserver<com.evellyn.lottery.stubs.game.Cupom>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -334,6 +391,7 @@ public final class GameServiceGrpc {
               .setSchemaDescriptor(new GameServiceFileDescriptorSupplier())
               .addMethod(getGetGamesByPlayerMethod())
               .addMethod(getDrawNumbersMethod())
+              .addMethod(getDoBetMethod())
               .build();
         }
       }

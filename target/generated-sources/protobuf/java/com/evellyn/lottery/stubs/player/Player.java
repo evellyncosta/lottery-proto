@@ -24,16 +24,6 @@ public final class Player {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_evellyn_lottery_stubs_player_PlayerResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_evellyn_lottery_stubs_player_Bet_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_evellyn_lottery_stubs_player_Bet_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_evellyn_lottery_stubs_player_Cupom_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_evellyn_lottery_stubs_player_Cupom_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -50,16 +40,12 @@ public final class Player {
       "\t\"\226\001\n\016PlayerResponse\022\n\n\002id\030\001 \001(\t\022\014\n\004name" +
       "\030\002 \001(\t\022.\n\nbirth_date\030\003 \001(\0132\032.google.prot" +
       "obuf.Timestamp\022:\n\014gamesForUser\030\004 \003(\0132$.c" +
-      "om.evellyn.lottery.stubs.game.Game\"(\n\003Be" +
-      "t\022\020\n\010playerId\030\001 \001(\t\022\017\n\007numbers\030\002 \001(\t\"$\n\005" +
-      "Cupom\022\014\n\004code\030\001 \001(\t\022\r\n\005value\030\002 \001(\t2\343\001\n\rP" +
+      "om.evellyn.lottery.stubs.game.Game2\206\001\n\rP" +
       "layerService\022u\n\020getPlayerDetails\022/.com.e" +
       "vellyn.lottery.stubs.player.PlayerReques" +
       "t\0320.com.evellyn.lottery.stubs.player.Pla" +
-      "yerResponse\022[\n\005doBet\022%.com.evellyn.lotte" +
-      "ry.stubs.player.Bet\032\'.com.evellyn.lotter" +
-      "y.stubs.player.Cupom\"\000(\001B$\n com.evellyn." +
-      "lottery.stubs.playerP\001b\006proto3"
+      "yerResponseB$\n com.evellyn.lottery.stubs" +
+      ".playerP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -79,18 +65,6 @@ public final class Player {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_evellyn_lottery_stubs_player_PlayerResponse_descriptor,
         new java.lang.String[] { "Id", "Name", "BirthDate", "GamesForUser", });
-    internal_static_com_evellyn_lottery_stubs_player_Bet_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_com_evellyn_lottery_stubs_player_Bet_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_evellyn_lottery_stubs_player_Bet_descriptor,
-        new java.lang.String[] { "PlayerId", "Numbers", });
-    internal_static_com_evellyn_lottery_stubs_player_Cupom_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_com_evellyn_lottery_stubs_player_Cupom_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_evellyn_lottery_stubs_player_Cupom_descriptor,
-        new java.lang.String[] { "Code", "Value", });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.evellyn.lottery.stubs.game.GameOuterClass.getDescriptor();
   }
