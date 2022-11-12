@@ -36,26 +36,22 @@ public final class Player {
       "\n\033player-service/player.proto\022 com.evell" +
       "yn.lottery.stubs.player\032\037google/protobuf" +
       "/timestamp.proto\032\"game-management-servic" +
-      "e/game.proto\032\017file/file.proto\"\033\n\rPlayerR" +
-      "equest\022\n\n\002id\030\001 \001(\t\"\226\001\n\016PlayerResponse\022\n\n" +
-      "\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022.\n\nbirth_date\030\003 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022:\n\014games" +
-      "ForUser\030\004 \003(\0132$.com.evellyn.lottery.stub" +
-      "s.game.Game2\376\001\n\rPlayerService\022u\n\020getPlay" +
-      "erDetails\022/.com.evellyn.lottery.stubs.pl" +
-      "ayer.PlayerRequest\0320.com.evellyn.lottery" +
-      ".stubs.player.PlayerResponse\022v\n\013uploadPh" +
-      "oto\0221.com.evellyn.lottery.stubs.file.Fil" +
-      "eUploadRequest\0322.com.evellyn.lottery.stu" +
-      "bs.file.FileUploadResponse(\001B$\n com.evel" +
-      "lyn.lottery.stubs.playerP\001b\006proto3"
+      "e/game.proto\"\033\n\rPlayerRequest\022\n\n\002id\030\001 \001(" +
+      "\t\"\226\001\n\016PlayerResponse\022\n\n\002id\030\001 \001(\t\022\014\n\004name" +
+      "\030\002 \001(\t\022.\n\nbirth_date\030\003 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022:\n\014gamesForUser\030\004 \003(\0132$.c" +
+      "om.evellyn.lottery.stubs.game.Game2\206\001\n\rP" +
+      "layerService\022u\n\020getPlayerDetails\022/.com.e" +
+      "vellyn.lottery.stubs.player.PlayerReques" +
+      "t\0320.com.evellyn.lottery.stubs.player.Pla" +
+      "yerResponseB$\n com.evellyn.lottery.stubs" +
+      ".playerP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.evellyn.lottery.stubs.game.GameOuterClass.getDescriptor(),
-          com.evellyn.lottery.stubs.file.FileOuterClass.getDescriptor(),
         });
     internal_static_com_evellyn_lottery_stubs_player_PlayerRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -71,7 +67,6 @@ public final class Player {
         new java.lang.String[] { "Id", "Name", "BirthDate", "GamesForUser", });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.evellyn.lottery.stubs.game.GameOuterClass.getDescriptor();
-    com.evellyn.lottery.stubs.file.FileOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

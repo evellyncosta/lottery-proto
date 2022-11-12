@@ -5,6 +5,10 @@ package com.evellyn.lottery.stubs.file;
 option java_package = "com.evellyn.lottery.stubs.file";
 option java_multiple_files = true;
 
+service FileService {
+  rpc upload(stream FileUploadRequest) returns(FileUploadResponse);
+}
+
 message MetaData {
   string name = 1;
   string type = 2;
@@ -32,3 +36,4 @@ message FileUploadResponse {
   string name = 1;
   Status status = 2;
 }
+

@@ -8,6 +8,8 @@ com/evellyn/lottery/stubs/game/GameServiceGrpc$GameServiceImplBase.class
 com/evellyn/lottery/stubs/game/DrawNumbersResponse.class
 com/evellyn/lottery/stubs/player/PlayerServiceGrpc.class
 com/evellyn/lottery/stubs/file/MetaData$Builder.class
+com/evellyn/lottery/stubs/file/FileServiceGrpc$FileServiceMethodDescriptorSupplier.class
+com/evellyn/lottery/stubs/file/FileServiceGrpc$FileServiceBaseDescriptorSupplier.class
 com/evellyn/lottery/stubs/game/GameResponseOrBuilder.class
 com/evellyn/lottery/stubs/player/PlayerResponse$1.class
 com/evellyn/lottery/stubs/game/DrawNumbersResponseOrBuilder.class
@@ -19,13 +21,16 @@ com/evellyn/lottery/stubs/game/GameRequest$1.class
 com/evellyn/lottery/stubs/file/Status.class
 com/evellyn/lottery/stubs/file/Status$1.class
 com/evellyn/lottery/stubs/game/Game.class
+com/evellyn/lottery/stubs/file/FileServiceGrpc$MethodHandlers.class
 com/evellyn/lottery/stubs/game/GameOuterClass.class
 com/evellyn/lottery/stubs/game/GameServiceGrpc$3.class
+com/evellyn/lottery/stubs/file/FileServiceGrpc$3.class
 com/evellyn/lottery/stubs/file/File$1.class
 com/evellyn/lottery/stubs/game/GameResponse$1.class
 com/evellyn/lottery/stubs/game/Game$Builder.class
 com/evellyn/lottery/stubs/player/PlayerServiceGrpc$PlayerServiceMethodDescriptorSupplier.class
 com/evellyn/lottery/stubs/file/MetaDataOrBuilder.class
+com/evellyn/lottery/stubs/file/FileServiceGrpc$1.class
 com/evellyn/lottery/stubs/player/PlayerRequest$1.class
 com/evellyn/lottery/stubs/game/GameServiceGrpc$1.class
 com/evellyn/lottery/stubs/player/Player.class
@@ -34,6 +39,7 @@ com/evellyn/lottery/stubs/game/CupomOrBuilder.class
 com/evellyn/lottery/stubs/file/FileOuterClass.class
 com/evellyn/lottery/stubs/player/PlayerRequest.class
 com/evellyn/lottery/stubs/game/Game$1.class
+com/evellyn/lottery/stubs/file/FileServiceGrpc.class
 com/evellyn/lottery/stubs/file/FileUploadRequestOrBuilder.class
 com/evellyn/lottery/stubs/player/PlayerServiceGrpc$MethodHandlers.class
 com/evellyn/lottery/stubs/game/GameRequestOrBuilder.class
@@ -45,12 +51,15 @@ com/evellyn/lottery/stubs/file/FileUploadResponse$Builder.class
 com/evellyn/lottery/stubs/game/GameServiceGrpc$GameServiceStub.class
 com/evellyn/lottery/stubs/game/Bet$Builder.class
 com/evellyn/lottery/stubs/file/File.class
+com/evellyn/lottery/stubs/file/FileServiceGrpc$FileServiceFileDescriptorSupplier.class
 com/evellyn/lottery/stubs/game/GameServiceGrpc$GameServiceFileDescriptorSupplier.class
+com/evellyn/lottery/stubs/file/FileServiceGrpc$FileServiceBlockingStub.class
 com/evellyn/lottery/stubs/game/GameRequest.class
 com/evellyn/lottery/stubs/game/Bet$1.class
 com/evellyn/lottery/stubs/player/PlayerServiceGrpc$PlayerServiceFileDescriptorSupplier.class
 com/evellyn/lottery/stubs/file/FileUploadRequest$RequestCase.class
 com/evellyn/lottery/stubs/file/FileUploadRequest$2.class
+com/evellyn/lottery/stubs/file/FileServiceGrpc$FileServiceImplBase.class
 com/evellyn/lottery/stubs/game/Cupom.class
 com/evellyn/lottery/stubs/player/PlayerServiceGrpc$3.class
 com/evellyn/lottery/stubs/file/FileUploadResponseOrBuilder.class
@@ -65,7 +74,9 @@ com/evellyn/lottery/stubs/game/GameServiceGrpc$GameServiceFutureStub.class
 com/evellyn/lottery/stubs/player/PlayerServiceGrpc$2.class
 com/evellyn/lottery/stubs/file/MetaData.class
 com/evellyn/lottery/stubs/file/FileUploadResponse$1.class
+com/evellyn/lottery/stubs/file/FileServiceGrpc$FileServiceFutureStub.class
 com/evellyn/lottery/stubs/file/File$Builder.class
+com/evellyn/lottery/stubs/file/FileServiceGrpc$FileServiceStub.class
 com/evellyn/lottery/stubs/game/GameRequest$Builder.class
 com/evellyn/lottery/stubs/game/DrawNumbersResponse$1.class
 com/evellyn/lottery/stubs/player/PlayerServiceGrpc$PlayerServiceStub.class
@@ -76,4 +87,5 @@ com/evellyn/lottery/stubs/file/FileUploadRequest$Builder.class
 com/evellyn/lottery/stubs/game/GameServiceGrpc$GameServiceBaseDescriptorSupplier.class
 com/evellyn/lottery/stubs/game/GameServiceGrpc$2.class
 com/evellyn/lottery/stubs/game/GameServiceGrpc.class
+com/evellyn/lottery/stubs/file/FileServiceGrpc$2.class
 com/evellyn/lottery/stubs/game/DrawNumbersResponse$Builder.class
