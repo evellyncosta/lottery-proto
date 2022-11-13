@@ -1,0 +1,12 @@
+{
+  "details": {
+    "methodFqn": "com.evellyn.lottery.stubs.game.GameService.drawNumbers"
+  },
+  "requests": [
+    {
+      "location": "drawNumbers-request.json"
+    }
+  ],
+  "operationType": "serverStreaming",
+  "invokerName": "grpc"
+}

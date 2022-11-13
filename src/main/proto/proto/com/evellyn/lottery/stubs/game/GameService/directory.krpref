@@ -1,0 +1,11 @@
+{
+  "settings": [
+    {
+      "options": {
+        "grpc": {
+          "endpoint": "0.0.0.0:50051"
+        }
+      }
+    }
+  ]
+}

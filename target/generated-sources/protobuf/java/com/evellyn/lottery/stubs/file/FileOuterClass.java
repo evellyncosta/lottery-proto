@@ -53,11 +53,8 @@ public final class FileOuterClass {
       "ponse\022\014\n\004name\030\001 \001(\t\0226\n\006status\030\002 \001(\0162&.co" +
       "m.evellyn.lottery.stubs.file.Status*?\n\006S" +
       "tatus\022\013\n\007PENDING\020\000\022\017\n\013IN_PROGRESS\020\001\022\013\n\007S" +
-      "UCCESS\020\002\022\n\n\006FAILED\020\0032\200\001\n\013FileService\022q\n\006" +
-      "upload\0221.com.evellyn.lottery.stubs.file." +
-      "FileUploadRequest\0322.com.evellyn.lottery." +
-      "stubs.file.FileUploadResponse(\001B\"\n\036com.e" +
-      "vellyn.lottery.stubs.fileP\001b\006proto3"
+      "UCCESS\020\002\022\n\n\006FAILED\020\003B\"\n\036com.evellyn.lott" +
+      "ery.stubs.fileP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

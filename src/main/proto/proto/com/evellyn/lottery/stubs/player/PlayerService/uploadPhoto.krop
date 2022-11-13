@@ -1,0 +1,13 @@
+{
+  "details": {
+    "methodFqn": "com.evellyn.lottery.stubs.player.PlayerService.uploadPhoto",
+    "metadata": []
+  },
+  "requests": [
+    {
+      "location": "uploadPhoto-request-0.json"
+    }
+  ],
+  "operationType": "clientStreaming",
+  "invokerName": "grpc"
+}

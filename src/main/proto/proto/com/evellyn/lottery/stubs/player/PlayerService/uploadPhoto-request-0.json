@@ -1,0 +1,6 @@
+{
+  "metadata": {
+    "name": "{{ faker.name.last_name }}",
+    "type": "{{ faker.database.type }}"
+  }
+}

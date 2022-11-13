@@ -22,10 +22,9 @@ enum Status {
 }
 
 message FileUploadRequest {
-  oneof request {
-    MetaData metadata = 1;
-    File file = 2;
-  }
+  MetaData metadata = 1;
+  File file = 2;
+
 }
 
 message FileUploadResponse {

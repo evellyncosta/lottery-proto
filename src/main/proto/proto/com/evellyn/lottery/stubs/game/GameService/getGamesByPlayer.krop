@@ -1,0 +1,13 @@
+{
+  "details": {
+    "endpoint": "http://localhost:50052",
+    "methodFqn": "com.evellyn.lottery.stubs.game.GameService.getGamesByPlayer"
+  },
+  "requests": [
+    {
+      "location": "getGamesByPlayer-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc"
+}

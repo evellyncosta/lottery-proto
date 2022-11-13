@@ -1,0 +1,4 @@
+{
+  "playerId": "{{ faker.random.uuid }}",
+  "numbers": "Swedish Krona leading-edge Incredible Wooden Chicken"
+}

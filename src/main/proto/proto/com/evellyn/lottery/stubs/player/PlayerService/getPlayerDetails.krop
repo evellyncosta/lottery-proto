@@ -1,0 +1,12 @@
+{
+  "details": {
+    "methodFqn": "com.evellyn.lottery.stubs.player.PlayerService.getPlayerDetails"
+  },
+  "requests": [
+    {
+      "location": "getPlayerDetails-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc"
+}
