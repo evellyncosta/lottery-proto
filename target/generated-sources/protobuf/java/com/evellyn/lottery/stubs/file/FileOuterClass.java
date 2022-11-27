@@ -45,16 +45,16 @@ public final class FileOuterClass {
     java.lang.String[] descriptorData = {
       "\n\017file/file.proto\022\036com.evellyn.lottery.s" +
       "tubs.file\"&\n\010MetaData\022\014\n\004name\030\001 \001(\t\022\014\n\004t" +
-      "ype\030\002 \001(\t\"\027\n\004File\022\017\n\007content\030\001 \001(\014\"\222\001\n\021F" +
-      "ileUploadRequest\022<\n\010metadata\030\001 \001(\0132(.com" +
-      ".evellyn.lottery.stubs.file.MetaDataH\000\0224" +
-      "\n\004file\030\002 \001(\0132$.com.evellyn.lottery.stubs" +
-      ".file.FileH\000B\t\n\007request\"Z\n\022FileUploadRes" +
-      "ponse\022\014\n\004name\030\001 \001(\t\0226\n\006status\030\002 \001(\0162&.co" +
-      "m.evellyn.lottery.stubs.file.Status*?\n\006S" +
-      "tatus\022\013\n\007PENDING\020\000\022\017\n\013IN_PROGRESS\020\001\022\013\n\007S" +
-      "UCCESS\020\002\022\n\n\006FAILED\020\003B\"\n\036com.evellyn.lott" +
-      "ery.stubs.fileP\001b\006proto3"
+      "ype\030\002 \001(\t\"\027\n\004File\022\017\n\007content\030\001 \001(\014\"\203\001\n\021F" +
+      "ileUploadRequest\022:\n\010metadata\030\001 \001(\0132(.com" +
+      ".evellyn.lottery.stubs.file.MetaData\0222\n\004" +
+      "file\030\002 \001(\0132$.com.evellyn.lottery.stubs.f" +
+      "ile.File\"Z\n\022FileUploadResponse\022\014\n\004name\030\001" +
+      " \001(\t\0226\n\006status\030\002 \001(\0162&.com.evellyn.lotte" +
+      "ry.stubs.file.Status*?\n\006Status\022\013\n\007PENDIN" +
+      "G\020\000\022\017\n\013IN_PROGRESS\020\001\022\013\n\007SUCCESS\020\002\022\n\n\006FAI" +
+      "LED\020\003B\"\n\036com.evellyn.lottery.stubs.fileP" +
+      "\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -77,7 +77,7 @@ public final class FileOuterClass {
     internal_static_com_evellyn_lottery_stubs_file_FileUploadRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_evellyn_lottery_stubs_file_FileUploadRequest_descriptor,
-        new java.lang.String[] { "Metadata", "File", "Request", });
+        new java.lang.String[] { "Metadata", "File", });
     internal_static_com_evellyn_lottery_stubs_file_FileUploadResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_com_evellyn_lottery_stubs_file_FileUploadResponse_fieldAccessorTable = new

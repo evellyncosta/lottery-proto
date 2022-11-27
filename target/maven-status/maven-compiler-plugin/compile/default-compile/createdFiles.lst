@@ -49,8 +49,6 @@ com/evellyn/lottery/stubs/game/GameServiceGrpc$GameServiceFileDescriptorSupplier
 com/evellyn/lottery/stubs/game/GameRequest.class
 com/evellyn/lottery/stubs/game/Bet$1.class
 com/evellyn/lottery/stubs/player/PlayerServiceGrpc$PlayerServiceFileDescriptorSupplier.class
-com/evellyn/lottery/stubs/file/FileUploadRequest$RequestCase.class
-com/evellyn/lottery/stubs/file/FileUploadRequest$2.class
 com/evellyn/lottery/stubs/game/Cupom.class
 com/evellyn/lottery/stubs/player/PlayerServiceGrpc$3.class
 com/evellyn/lottery/stubs/file/FileUploadResponseOrBuilder.class

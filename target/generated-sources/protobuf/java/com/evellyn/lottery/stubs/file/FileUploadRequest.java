@@ -43,55 +43,15 @@ private static final long serialVersionUID = 0L;
             com.evellyn.lottery.stubs.file.FileUploadRequest.class, com.evellyn.lottery.stubs.file.FileUploadRequest.Builder.class);
   }
 
-  private int requestCase_ = 0;
-  private java.lang.Object request_;
-  public enum RequestCase
-      implements com.google.protobuf.Internal.EnumLite,
-          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-    METADATA(1),
-    FILE(2),
-    REQUEST_NOT_SET(0);
-    private final int value;
-    private RequestCase(int value) {
-      this.value = value;
-    }
-    /**
-     * @param value The number of the enum to look for.
-     * @return The enum associated with the given number.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static RequestCase valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static RequestCase forNumber(int value) {
-      switch (value) {
-        case 1: return METADATA;
-        case 2: return FILE;
-        case 0: return REQUEST_NOT_SET;
-        default: return null;
-      }
-    }
-    public int getNumber() {
-      return this.value;
-    }
-  };
-
-  public RequestCase
-  getRequestCase() {
-    return RequestCase.forNumber(
-        requestCase_);
-  }
-
   public static final int METADATA_FIELD_NUMBER = 1;
+  private com.evellyn.lottery.stubs.file.MetaData metadata_;
   /**
    * <code>.com.evellyn.lottery.stubs.file.MetaData metadata = 1;</code>
    * @return Whether the metadata field is set.
    */
   @java.lang.Override
   public boolean hasMetadata() {
-    return requestCase_ == 1;
+    return metadata_ != null;
   }
   /**
    * <code>.com.evellyn.lottery.stubs.file.MetaData metadata = 1;</code>
@@ -99,30 +59,25 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.evellyn.lottery.stubs.file.MetaData getMetadata() {
-    if (requestCase_ == 1) {
-       return (com.evellyn.lottery.stubs.file.MetaData) request_;
-    }
-    return com.evellyn.lottery.stubs.file.MetaData.getDefaultInstance();
+    return metadata_ == null ? com.evellyn.lottery.stubs.file.MetaData.getDefaultInstance() : metadata_;
   }
   /**
    * <code>.com.evellyn.lottery.stubs.file.MetaData metadata = 1;</code>
    */
   @java.lang.Override
   public com.evellyn.lottery.stubs.file.MetaDataOrBuilder getMetadataOrBuilder() {
-    if (requestCase_ == 1) {
-       return (com.evellyn.lottery.stubs.file.MetaData) request_;
-    }
-    return com.evellyn.lottery.stubs.file.MetaData.getDefaultInstance();
+    return getMetadata();
   }
 
   public static final int FILE_FIELD_NUMBER = 2;
+  private com.evellyn.lottery.stubs.file.File file_;
   /**
    * <code>.com.evellyn.lottery.stubs.file.File file = 2;</code>
    * @return Whether the file field is set.
    */
   @java.lang.Override
   public boolean hasFile() {
-    return requestCase_ == 2;
+    return file_ != null;
   }
   /**
    * <code>.com.evellyn.lottery.stubs.file.File file = 2;</code>
@@ -130,20 +85,14 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.evellyn.lottery.stubs.file.File getFile() {
-    if (requestCase_ == 2) {
-       return (com.evellyn.lottery.stubs.file.File) request_;
-    }
-    return com.evellyn.lottery.stubs.file.File.getDefaultInstance();
+    return file_ == null ? com.evellyn.lottery.stubs.file.File.getDefaultInstance() : file_;
   }
   /**
    * <code>.com.evellyn.lottery.stubs.file.File file = 2;</code>
    */
   @java.lang.Override
   public com.evellyn.lottery.stubs.file.FileOrBuilder getFileOrBuilder() {
-    if (requestCase_ == 2) {
-       return (com.evellyn.lottery.stubs.file.File) request_;
-    }
-    return com.evellyn.lottery.stubs.file.File.getDefaultInstance();
+    return getFile();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -160,11 +109,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (requestCase_ == 1) {
-      output.writeMessage(1, (com.evellyn.lottery.stubs.file.MetaData) request_);
+    if (metadata_ != null) {
+      output.writeMessage(1, getMetadata());
     }
-    if (requestCase_ == 2) {
-      output.writeMessage(2, (com.evellyn.lottery.stubs.file.File) request_);
+    if (file_ != null) {
+      output.writeMessage(2, getFile());
     }
     getUnknownFields().writeTo(output);
   }
@@ -175,13 +124,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (requestCase_ == 1) {
+    if (metadata_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, (com.evellyn.lottery.stubs.file.MetaData) request_);
+        .computeMessageSize(1, getMetadata());
     }
-    if (requestCase_ == 2) {
+    if (file_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, (com.evellyn.lottery.stubs.file.File) request_);
+        .computeMessageSize(2, getFile());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -198,18 +147,15 @@ private static final long serialVersionUID = 0L;
     }
     com.evellyn.lottery.stubs.file.FileUploadRequest other = (com.evellyn.lottery.stubs.file.FileUploadRequest) obj;
 
-    if (!getRequestCase().equals(other.getRequestCase())) return false;
-    switch (requestCase_) {
-      case 1:
-        if (!getMetadata()
-            .equals(other.getMetadata())) return false;
-        break;
-      case 2:
-        if (!getFile()
-            .equals(other.getFile())) return false;
-        break;
-      case 0:
-      default:
+    if (hasMetadata() != other.hasMetadata()) return false;
+    if (hasMetadata()) {
+      if (!getMetadata()
+          .equals(other.getMetadata())) return false;
+    }
+    if (hasFile() != other.hasFile()) return false;
+    if (hasFile()) {
+      if (!getFile()
+          .equals(other.getFile())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -222,17 +168,13 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    switch (requestCase_) {
-      case 1:
-        hash = (37 * hash) + METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + getMetadata().hashCode();
-        break;
-      case 2:
-        hash = (37 * hash) + FILE_FIELD_NUMBER;
-        hash = (53 * hash) + getFile().hashCode();
-        break;
-      case 0:
-      default:
+    if (hasMetadata()) {
+      hash = (37 * hash) + METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getMetadata().hashCode();
+    }
+    if (hasFile()) {
+      hash = (37 * hash) + FILE_FIELD_NUMBER;
+      hash = (53 * hash) + getFile().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -362,14 +304,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (metadataBuilder_ != null) {
-        metadataBuilder_.clear();
+      if (metadataBuilder_ == null) {
+        metadata_ = null;
+      } else {
+        metadata_ = null;
+        metadataBuilder_ = null;
       }
-      if (fileBuilder_ != null) {
-        fileBuilder_.clear();
+      if (fileBuilder_ == null) {
+        file_ = null;
+      } else {
+        file_ = null;
+        fileBuilder_ = null;
       }
-      requestCase_ = 0;
-      request_ = null;
       return this;
     }
 
@@ -396,21 +342,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.evellyn.lottery.stubs.file.FileUploadRequest buildPartial() {
       com.evellyn.lottery.stubs.file.FileUploadRequest result = new com.evellyn.lottery.stubs.file.FileUploadRequest(this);
-      if (requestCase_ == 1) {
-        if (metadataBuilder_ == null) {
-          result.request_ = request_;
-        } else {
-          result.request_ = metadataBuilder_.build();
-        }
+      if (metadataBuilder_ == null) {
+        result.metadata_ = metadata_;
+      } else {
+        result.metadata_ = metadataBuilder_.build();
       }
-      if (requestCase_ == 2) {
-        if (fileBuilder_ == null) {
-          result.request_ = request_;
-        } else {
-          result.request_ = fileBuilder_.build();
-        }
+      if (fileBuilder_ == null) {
+        result.file_ = file_;
+      } else {
+        result.file_ = fileBuilder_.build();
       }
-      result.requestCase_ = requestCase_;
       onBuilt();
       return result;
     }
@@ -459,18 +400,11 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.evellyn.lottery.stubs.file.FileUploadRequest other) {
       if (other == com.evellyn.lottery.stubs.file.FileUploadRequest.getDefaultInstance()) return this;
-      switch (other.getRequestCase()) {
-        case METADATA: {
-          mergeMetadata(other.getMetadata());
-          break;
-        }
-        case FILE: {
-          mergeFile(other.getFile());
-          break;
-        }
-        case REQUEST_NOT_SET: {
-          break;
-        }
+      if (other.hasMetadata()) {
+        mergeMetadata(other.getMetadata());
+      }
+      if (other.hasFile()) {
+        mergeFile(other.getFile());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -502,14 +436,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getMetadataFieldBuilder().getBuilder(),
                   extensionRegistry);
-              requestCase_ = 1;
+
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getFileFieldBuilder().getBuilder(),
                   extensionRegistry);
-              requestCase_ = 2;
+
               break;
             } // case 18
             default: {
@@ -527,48 +461,26 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
-    private int requestCase_ = 0;
-    private java.lang.Object request_;
-    public RequestCase
-        getRequestCase() {
-      return RequestCase.forNumber(
-          requestCase_);
-    }
 
-    public Builder clearRequest() {
-      requestCase_ = 0;
-      request_ = null;
-      onChanged();
-      return this;
-    }
-
-
+    private com.evellyn.lottery.stubs.file.MetaData metadata_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.evellyn.lottery.stubs.file.MetaData, com.evellyn.lottery.stubs.file.MetaData.Builder, com.evellyn.lottery.stubs.file.MetaDataOrBuilder> metadataBuilder_;
     /**
      * <code>.com.evellyn.lottery.stubs.file.MetaData metadata = 1;</code>
      * @return Whether the metadata field is set.
      */
-    @java.lang.Override
     public boolean hasMetadata() {
-      return requestCase_ == 1;
+      return metadataBuilder_ != null || metadata_ != null;
     }
     /**
      * <code>.com.evellyn.lottery.stubs.file.MetaData metadata = 1;</code>
      * @return The metadata.
      */
-    @java.lang.Override
     public com.evellyn.lottery.stubs.file.MetaData getMetadata() {
       if (metadataBuilder_ == null) {
-        if (requestCase_ == 1) {
-          return (com.evellyn.lottery.stubs.file.MetaData) request_;
-        }
-        return com.evellyn.lottery.stubs.file.MetaData.getDefaultInstance();
+        return metadata_ == null ? com.evellyn.lottery.stubs.file.MetaData.getDefaultInstance() : metadata_;
       } else {
-        if (requestCase_ == 1) {
-          return metadataBuilder_.getMessage();
-        }
-        return com.evellyn.lottery.stubs.file.MetaData.getDefaultInstance();
+        return metadataBuilder_.getMessage();
       }
     }
     /**
@@ -579,12 +491,12 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        request_ = value;
+        metadata_ = value;
         onChanged();
       } else {
         metadataBuilder_.setMessage(value);
       }
-      requestCase_ = 1;
+
       return this;
     }
     /**
@@ -593,12 +505,12 @@ private static final long serialVersionUID = 0L;
     public Builder setMetadata(
         com.evellyn.lottery.stubs.file.MetaData.Builder builderForValue) {
       if (metadataBuilder_ == null) {
-        request_ = builderForValue.build();
+        metadata_ = builderForValue.build();
         onChanged();
       } else {
         metadataBuilder_.setMessage(builderForValue.build());
       }
-      requestCase_ = 1;
+
       return this;
     }
     /**
@@ -606,22 +518,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeMetadata(com.evellyn.lottery.stubs.file.MetaData value) {
       if (metadataBuilder_ == null) {
-        if (requestCase_ == 1 &&
-            request_ != com.evellyn.lottery.stubs.file.MetaData.getDefaultInstance()) {
-          request_ = com.evellyn.lottery.stubs.file.MetaData.newBuilder((com.evellyn.lottery.stubs.file.MetaData) request_)
-              .mergeFrom(value).buildPartial();
+        if (metadata_ != null) {
+          metadata_ =
+            com.evellyn.lottery.stubs.file.MetaData.newBuilder(metadata_).mergeFrom(value).buildPartial();
         } else {
-          request_ = value;
+          metadata_ = value;
         }
         onChanged();
       } else {
-        if (requestCase_ == 1) {
-          metadataBuilder_.mergeFrom(value);
-        } else {
-          metadataBuilder_.setMessage(value);
-        }
+        metadataBuilder_.mergeFrom(value);
       }
-      requestCase_ = 1;
+
       return this;
     }
     /**
@@ -629,38 +536,32 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearMetadata() {
       if (metadataBuilder_ == null) {
-        if (requestCase_ == 1) {
-          requestCase_ = 0;
-          request_ = null;
-          onChanged();
-        }
+        metadata_ = null;
+        onChanged();
       } else {
-        if (requestCase_ == 1) {
-          requestCase_ = 0;
-          request_ = null;
-        }
-        metadataBuilder_.clear();
+        metadata_ = null;
+        metadataBuilder_ = null;
       }
+
       return this;
     }
     /**
      * <code>.com.evellyn.lottery.stubs.file.MetaData metadata = 1;</code>
      */
     public com.evellyn.lottery.stubs.file.MetaData.Builder getMetadataBuilder() {
+      
+      onChanged();
       return getMetadataFieldBuilder().getBuilder();
     }
     /**
      * <code>.com.evellyn.lottery.stubs.file.MetaData metadata = 1;</code>
      */
-    @java.lang.Override
     public com.evellyn.lottery.stubs.file.MetaDataOrBuilder getMetadataOrBuilder() {
-      if ((requestCase_ == 1) && (metadataBuilder_ != null)) {
+      if (metadataBuilder_ != null) {
         return metadataBuilder_.getMessageOrBuilder();
       } else {
-        if (requestCase_ == 1) {
-          return (com.evellyn.lottery.stubs.file.MetaData) request_;
-        }
-        return com.evellyn.lottery.stubs.file.MetaData.getDefaultInstance();
+        return metadata_ == null ?
+            com.evellyn.lottery.stubs.file.MetaData.getDefaultInstance() : metadata_;
       }
     }
     /**
@@ -670,47 +571,35 @@ private static final long serialVersionUID = 0L;
         com.evellyn.lottery.stubs.file.MetaData, com.evellyn.lottery.stubs.file.MetaData.Builder, com.evellyn.lottery.stubs.file.MetaDataOrBuilder> 
         getMetadataFieldBuilder() {
       if (metadataBuilder_ == null) {
-        if (!(requestCase_ == 1)) {
-          request_ = com.evellyn.lottery.stubs.file.MetaData.getDefaultInstance();
-        }
         metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.evellyn.lottery.stubs.file.MetaData, com.evellyn.lottery.stubs.file.MetaData.Builder, com.evellyn.lottery.stubs.file.MetaDataOrBuilder>(
-                (com.evellyn.lottery.stubs.file.MetaData) request_,
+                getMetadata(),
                 getParentForChildren(),
                 isClean());
-        request_ = null;
+        metadata_ = null;
       }
-      requestCase_ = 1;
-      onChanged();;
       return metadataBuilder_;
     }
 
+    private com.evellyn.lottery.stubs.file.File file_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.evellyn.lottery.stubs.file.File, com.evellyn.lottery.stubs.file.File.Builder, com.evellyn.lottery.stubs.file.FileOrBuilder> fileBuilder_;
     /**
      * <code>.com.evellyn.lottery.stubs.file.File file = 2;</code>
      * @return Whether the file field is set.
      */
-    @java.lang.Override
     public boolean hasFile() {
-      return requestCase_ == 2;
+      return fileBuilder_ != null || file_ != null;
     }
     /**
      * <code>.com.evellyn.lottery.stubs.file.File file = 2;</code>
      * @return The file.
      */
-    @java.lang.Override
     public com.evellyn.lottery.stubs.file.File getFile() {
       if (fileBuilder_ == null) {
-        if (requestCase_ == 2) {
-          return (com.evellyn.lottery.stubs.file.File) request_;
-        }
-        return com.evellyn.lottery.stubs.file.File.getDefaultInstance();
+        return file_ == null ? com.evellyn.lottery.stubs.file.File.getDefaultInstance() : file_;
       } else {
-        if (requestCase_ == 2) {
-          return fileBuilder_.getMessage();
-        }
-        return com.evellyn.lottery.stubs.file.File.getDefaultInstance();
+        return fileBuilder_.getMessage();
       }
     }
     /**
@@ -721,12 +610,12 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        request_ = value;
+        file_ = value;
         onChanged();
       } else {
         fileBuilder_.setMessage(value);
       }
-      requestCase_ = 2;
+
       return this;
     }
     /**
@@ -735,12 +624,12 @@ private static final long serialVersionUID = 0L;
     public Builder setFile(
         com.evellyn.lottery.stubs.file.File.Builder builderForValue) {
       if (fileBuilder_ == null) {
-        request_ = builderForValue.build();
+        file_ = builderForValue.build();
         onChanged();
       } else {
         fileBuilder_.setMessage(builderForValue.build());
       }
-      requestCase_ = 2;
+
       return this;
     }
     /**
@@ -748,22 +637,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFile(com.evellyn.lottery.stubs.file.File value) {
       if (fileBuilder_ == null) {
-        if (requestCase_ == 2 &&
-            request_ != com.evellyn.lottery.stubs.file.File.getDefaultInstance()) {
-          request_ = com.evellyn.lottery.stubs.file.File.newBuilder((com.evellyn.lottery.stubs.file.File) request_)
-              .mergeFrom(value).buildPartial();
+        if (file_ != null) {
+          file_ =
+            com.evellyn.lottery.stubs.file.File.newBuilder(file_).mergeFrom(value).buildPartial();
         } else {
-          request_ = value;
+          file_ = value;
         }
         onChanged();
       } else {
-        if (requestCase_ == 2) {
-          fileBuilder_.mergeFrom(value);
-        } else {
-          fileBuilder_.setMessage(value);
-        }
+        fileBuilder_.mergeFrom(value);
       }
-      requestCase_ = 2;
+
       return this;
     }
     /**
@@ -771,38 +655,32 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearFile() {
       if (fileBuilder_ == null) {
-        if (requestCase_ == 2) {
-          requestCase_ = 0;
-          request_ = null;
-          onChanged();
-        }
+        file_ = null;
+        onChanged();
       } else {
-        if (requestCase_ == 2) {
-          requestCase_ = 0;
-          request_ = null;
-        }
-        fileBuilder_.clear();
+        file_ = null;
+        fileBuilder_ = null;
       }
+
       return this;
     }
     /**
      * <code>.com.evellyn.lottery.stubs.file.File file = 2;</code>
      */
     public com.evellyn.lottery.stubs.file.File.Builder getFileBuilder() {
+      
+      onChanged();
       return getFileFieldBuilder().getBuilder();
     }
     /**
      * <code>.com.evellyn.lottery.stubs.file.File file = 2;</code>
      */
-    @java.lang.Override
     public com.evellyn.lottery.stubs.file.FileOrBuilder getFileOrBuilder() {
-      if ((requestCase_ == 2) && (fileBuilder_ != null)) {
+      if (fileBuilder_ != null) {
         return fileBuilder_.getMessageOrBuilder();
       } else {
-        if (requestCase_ == 2) {
-          return (com.evellyn.lottery.stubs.file.File) request_;
-        }
-        return com.evellyn.lottery.stubs.file.File.getDefaultInstance();
+        return file_ == null ?
+            com.evellyn.lottery.stubs.file.File.getDefaultInstance() : file_;
       }
     }
     /**
@@ -812,18 +690,13 @@ private static final long serialVersionUID = 0L;
         com.evellyn.lottery.stubs.file.File, com.evellyn.lottery.stubs.file.File.Builder, com.evellyn.lottery.stubs.file.FileOrBuilder> 
         getFileFieldBuilder() {
       if (fileBuilder_ == null) {
-        if (!(requestCase_ == 2)) {
-          request_ = com.evellyn.lottery.stubs.file.File.getDefaultInstance();
-        }
         fileBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.evellyn.lottery.stubs.file.File, com.evellyn.lottery.stubs.file.File.Builder, com.evellyn.lottery.stubs.file.FileOrBuilder>(
-                (com.evellyn.lottery.stubs.file.File) request_,
+                getFile(),
                 getParentForChildren(),
                 isClean());
-        request_ = null;
+        file_ = null;
       }
-      requestCase_ = 2;
-      onChanged();;
       return fileBuilder_;
     }
     @java.lang.Override

@@ -36,6 +36,4 @@ public interface FileUploadRequestOrBuilder extends
    * <code>.com.evellyn.lottery.stubs.file.File file = 2;</code>
    */
   com.evellyn.lottery.stubs.file.FileOrBuilder getFileOrBuilder();
-
-  public com.evellyn.lottery.stubs.file.FileUploadRequest.RequestCase getRequestCase();
 }
