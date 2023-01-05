@@ -33,3 +33,13 @@ message PlayerResponse{
   google.protobuf.Timestamp birth_date = 3;
   repeated game.Game gamesForUser = 4;
 }
+
+message Bet{
+  string playerId = 1;
+  string numbers = 2;
+}
+
+message Cupom{
+  string code = 1;
+  string value = 2;
+}
