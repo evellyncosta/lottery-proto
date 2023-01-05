@@ -10,9 +10,18 @@ option java_package = "com.evellyn.lottery.stubs.player";
 option java_multiple_files = true;
 
 service PlayerService{
+  //pega detalhes dos jogadores
   rpc getPlayerDetails(PlayerRequest) returns (PlayerResponse);
+  //faz upload de uma foto
   rpc uploadPhoto(stream file.FileUploadRequest) returns(file.FileUploadResponse);
+  //faz aposta em lote
+  rpc doBets (stream Bet) returns (Cupom);
 }
+
+//se o player fez ate 10 apostas, tem 10% de desconto
+//se o player fez ate 20 apostas, tem 20% de desconto
+//se o player fez 30 ou mais apostas, tem 30% de desconto
+//o desconto é dado no final de todas as apostas
 
 message PlayerRequest{
   string id = 1;

@@ -9,17 +9,11 @@ option java_package = "com.evellyn.lottery.stubs.game";
 option java_multiple_files = true;
 
 service GameService{
+  //pega jogos por jogador
   rpc getGamesByPlayer(GameRequest) returns (GameResponse);
+  //sorteia os numeros
   rpc drawNumbers(google.protobuf.Empty) returns (stream DrawNumbersResponse);
-  rpc doBet (stream Bet) returns (Cupom){}
 }
-
-
-//se o player fez ate 10 apostas, tem 10% de desconto
-//se o player fez ate 20 apostas, tem 20% de desconto
-//se o player fez 30 ou mais apostas, tem 30% de desconto
-//o desconto é dado no final de todas as apostas
-
 
 message GameRequest{
   string playerId = 1;
