@@ -34,12 +34,12 @@ message PlayerResponse{
   repeated game.Game gamesForUser = 4;
 }
 
-message Bet{
+message BetRequest{
   string playerId = 1;
   string numbers = 2;
 }
 
-message Cupom{
-  string code = 1;
-  string value = 2;
+message BetResponse{
+  string betId = 1;
+  optional string cupom = 2;
 }
