@@ -15,12 +15,12 @@ service PlayerService{
   //faz upload de uma foto
   rpc uploadPhoto(stream file.FileUploadRequest) returns(file.FileUploadResponse);
   //faz aposta em lote
-  rpc doBets (stream Bet) returns (Cupom);
+  rpc doBets (stream BetRequest) returns (BetResponse);
 }
 
-//se o player fez ate 10 apostas, tem 10% de desconto
-//se o player fez ate 20 apostas, tem 20% de desconto
-//se o player fez 30 ou mais apostas, tem 30% de desconto
+//se o player fez ate 03 apostas, nao tem desconto
+//se o player fez ate 05 apostas, tem 10% de desconto
+//se o player fez a partir de 07 apostas, tem 20% de desconto
 //o desconto é dado no final de todas as apostas
 
 message PlayerRequest{
@@ -41,5 +41,11 @@ message BetRequest{
 
 message BetResponse{
   string betId = 1;
-  optional string cupom = 2;
+  optional Coupon coupon = 2;
+}
+
+message Coupon{
+  string code = 1;
+  string percentValue = 2;
+  string value = 3;
 }
