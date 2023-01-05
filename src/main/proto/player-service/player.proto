@@ -20,7 +20,7 @@ service PlayerService{
 
 //se o player fez ate 03 apostas, nao tem desconto
 //se o player fez ate 05 apostas, tem 10% de desconto
-//se o player fez a partir de 07 apostas, tem 20% de desconto
+//se o player fez a partir de 05 apostas, tem 20% de desconto
 //o desconto é dado no final de todas as apostas
 
 message PlayerRequest{
@@ -46,6 +46,4 @@ message BetResponse{
 
 message Coupon{
   string code = 1;
-  string percentValue = 2;
-  string value = 3;
 }
