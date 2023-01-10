@@ -15,7 +15,7 @@ service PlayerService{
   //faz upload de uma foto
   rpc uploadPhoto(stream file.FileUploadRequest) returns(file.FileUploadResponse);
   //faz aposta em lote
-  rpc doBets (stream BetRequest) returns (BetResponse);
+  rpc doBets (stream BetRequest) returns (stream BetResponse);
 }
 
 //se o player fez ate 03 apostas, nao tem desconto
